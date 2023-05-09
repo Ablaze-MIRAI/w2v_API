@@ -1,0 +1,10 @@
+.git
+.venv
+model
+*.zip
+script
+.editorconfig
+.gitignore
+README.md
+docker-compose.yml
+__pycache__
