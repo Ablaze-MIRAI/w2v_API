@@ -1,6 +1,7 @@
 [tool.poetry]
 name = "w2v_api"
 version = "1.0.0"
+license="MIT"
 description = ""
 authors = ["code-raisan <yuri@rainyan.net>"]
 
