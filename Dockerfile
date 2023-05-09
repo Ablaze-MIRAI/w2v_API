@@ -1,7 +1,7 @@
 FROM python:3.9.16-alpine
 
 RUN apk update
-RUN apk add curl
+RUN apk add curl gcc
 
 ENV POETRY_HOME=/opt/poetry
 RUN curl -sSL https://install.python-poetry.org | python3 - && \
