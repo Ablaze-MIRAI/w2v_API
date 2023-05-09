@@ -1,7 +1,10 @@
 FROM python:3.9.16-alpine
 
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-ENV PATH /root/.poetry/bin:$PATH
+ENV POETRY_HOME=/opt/poetry
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python && \
+  cd /usr/local/bin && \
+  ln -s /opt/poetry/bin/poetry && \
+  poetry config virtualenvs.create false
 
 WORKDIR /app
 COPY . .
