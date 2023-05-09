@@ -1,5 +1,8 @@
 FROM python:3.9.16-alpine
 
+RUN apk update
+RUN apk add curl
+
 ENV POETRY_HOME=/opt/poetry
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python && \
   cd /usr/local/bin && \
