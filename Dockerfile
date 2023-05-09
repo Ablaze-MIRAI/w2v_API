@@ -15,6 +15,7 @@ RUN curl -sSL https://install.python-poetry.org | python3 - && \
 WORKDIR /app
 COPY . .
 
+RUN poetry run python -m pip install --no-use-pep517 numpy
 RUN poetry install
 
 CMD [ "python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000" ]
