@@ -15,7 +15,7 @@ RUN curl -sSL https://install.python-poetry.org | python3 - && \
 WORKDIR /app
 COPY . .
 
-RUN python -m pip install gensim
-RUN poetry install
+RUN poetry export -f requirements.txt > requirements.txt
+RUN python -m pip install -r requirements.txt
 
 CMD [ "python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000" ]
