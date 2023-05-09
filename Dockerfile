@@ -5,7 +5,7 @@ RUN apk update \
     && apk add --upgrade --no-cache \
         bash openssh curl ca-certificates openssl less htop \
 		g++ make wget rsync \
-        build-base libpng-dev freetype-dev libexecinfo-dev openblas-dev libgomp lapack-dev \
+        build-base libpng-dev freetype-dev openblas-dev libgomp lapack-dev \
 		libgcc libquadmath musl  \
 		libgfortran \
 		lapack-dev
